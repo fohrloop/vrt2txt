@@ -1,3 +1,8 @@
 [project]
 name = "vrt2txt"
 version = "0.1.0"
+
+[project.urls]
+Homepage = "https://github.com/fohrloop/vrt2txt"
+"Source Code" = "https://github.com/fohrloop/vrt2txt"
+"Issue Tracker" = "https://github.com/fohrloop/vrt2txt/issues"
