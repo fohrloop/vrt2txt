@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
 I wrote this as part of my keyboard layout optimization project where I created a English+Finnish+Coding optimized layout called Granite. This package is alpha-level quality but is has some unit tests.
 
-Some functionality is still missing. For example only few types of quotes are handled, urls are not handled correctly, and for example "km/h" is output as "km/ h". There are probably a lot more other edge cases that could be handled better, but this extracts sentences perfectly >99% of the cases, so it was good enough for me. I'm not currently planning on working on this package further. Feel free for fork and modify to your needs.
+Some functionality is still missing. For example only few types of quotes are handled, urls are not handled correctly. There are probably a lot more other edge cases that could be handled better, but this extracts sentences perfectly >99% of the cases, so it was good enough for me. I'm not currently planning on working on this package further. Feel free for fork and modify to your needs.
 
 ## Running tests
 

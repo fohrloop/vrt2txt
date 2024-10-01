@@ -154,8 +154,10 @@ def _iter_sentence_parts(
             # By detault, assume that each part is separated with a space.
             space_before_part = True
 
-        if previous_part == "(":
+        if previous_part in {"(", "/"}:
             # After opening parenthesis there is no space
+            # After slash there is no space
+            # Example: "km/h"
             space_before_part = False
         elif previous_part == '"' and inside_double_quotes:
             # Inside double quotes, no space
@@ -191,7 +193,7 @@ def _iter_sentence_parts(
                 space_before_part = False
             inside_single_quotes = not inside_single_quotes
         elif part_type == PUNCT:
-            if part == "(":
+            if part in "(":
                 # Before opening parenthesis there is a space
                 # Example: "Foo (bar) baz"
                 space_before_part = True

@@ -308,6 +308,16 @@ def vrt_quote_within_a_word():
     """
 
 
+@pytest.fixture
+def vrt_km_per_hour():
+    return """
+    5	40	40	NUM	_	NumType=Card	4	nummod	_	_
+    6	km	km	NOUN	_	Abbr=Yes	0	root	_	_
+    7	/	/	PUNCT	_	_	6	punct	_	_
+    8	h	h	NOUN	_	Abbr=Yes|Case=Nom|Number=Sing	6	conj	_	_
+    """
+
+
 class TestParseVRTSentence:
 
     def test_single_word(self, vrt_single_word: str):
@@ -383,6 +393,10 @@ class TestParseVRTSentence:
     def test_quote_within_a_word(self, vrt_quote_within_a_word: str):
 
         assert parse_vrt_sentence(vrt_quote_within_a_word) == 'on "le retraité"'
+
+    def test_km_per_hour(self, vrt_km_per_hour: str):
+
+        assert parse_vrt_sentence(vrt_km_per_hour) == "40 km/h"
 
 
 class TestFormSentence:
